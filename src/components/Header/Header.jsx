@@ -1,13 +1,24 @@
-import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import { useState } from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import { GiLeafSwirl } from "react-icons/gi";
 
 import "./Header.css";
 
 function Header() {
+  const [expanded, setExpanded] = useState(false);
+
+  const closeMenu = () => setExpanded(false);
+
   return (
-    <Navbar bg="light" expand="lg" sticky="top">
+    <Navbar
+      bg="light"
+      expand="lg"
+      sticky="top"
+      expanded={expanded}
+    >
       <Container>
-        <Navbar.Brand href="/">
+
+        <Navbar.Brand href="/" onClick={closeMenu}>
           <div className="logo">
             <h1 className="logo-name">
               <GiLeafSwirl className="leaf-icon" />
@@ -17,21 +28,36 @@ function Header() {
           </div>
         </Navbar.Brand>
 
-        <Navbar.Toggle />
+        <Navbar.Toggle
+          onClick={() => setExpanded(!expanded)}
+        />
 
         <Navbar.Collapse>
           <Nav className="ms-auto">
-            <Nav.Link href="#inicio">Início</Nav.Link>
 
-            <Nav.Link href="#about">Sobre</Nav.Link>
+            <Nav.Link href="#inicio" onClick={closeMenu}>
+              Início
+            </Nav.Link>
 
-            <Nav.Link href="#receitas">Receitas</Nav.Link>
+            <Nav.Link href="#about" onClick={closeMenu}>
+              Sobre
+            </Nav.Link>
 
-            <Nav.Link href="#plans">Planos</Nav.Link>
-            
-            <Nav.Link href="#testimonials">Depoimentos</Nav.Link>
+            <Nav.Link href="#receitas" onClick={closeMenu}>
+              Receitas
+            </Nav.Link>
+
+            <Nav.Link href="#plans" onClick={closeMenu}>
+              Planos
+            </Nav.Link>
+
+            <Nav.Link href="#testimonials" onClick={closeMenu}>
+              Depoimentos
+            </Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
+
       </Container>
     </Navbar>
   );
