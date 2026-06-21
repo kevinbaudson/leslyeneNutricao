@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   VARIÁVEIS GLOBAIS
+========================= */
+:root {
+  --primary: #6F8F72;
+  --primary-light: #E8F1E7;
+  --dark: #2D2D2D;
+  --text: #6B7280;
+  --white: #FFFFFF;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+  --radius: 16px;
+}
+
+/* =========================
+   RESET GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--white);
+  color: var(--dark);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* =========================
+   LAYOUT GLOBAL
+========================= */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+section {
+  width: 100%;
+  padding: 100px 0;
+  position: relative;
+}
+
+/* =========================
+   TIPOGRAFIA PADRÃO
+========================= */
+h1, h2, h3, h4 {
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+p {
+  color: var(--text);
+}
+
+
+.btn {
+  border-radius: 10px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+
+.btn-primary-custom {
+  background: var(--primary) !important;
+  border: none !important;
+  color: var(--white) !important;
+}
+
+
+.btn-outline-success {
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+}
+
+.btn-outline-success:hover {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Animações */
+
+/* =========================
+   ANIMAÇÕES SUAVES
+========================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================
+   ANIMAÇÃO GLOBAL DE SECTIONS
+========================= */
+
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
