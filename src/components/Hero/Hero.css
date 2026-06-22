@@ -166,3 +166,10 @@
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
 }
+@media (max-width: 768px) {
+  .hero-numbers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
