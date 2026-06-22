@@ -1,7 +1,7 @@
 import "./Hero.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { PopupButton } from "react-calendly";
-import avatarNutri from "../../assets/images/avatar-nutri.png";
+import avatarNutri from "../../assets/images/nutri.png";
 
 function Hero() {
   return (
