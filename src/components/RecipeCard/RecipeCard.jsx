@@ -1,41 +1,36 @@
 import './RecipeCard.css';
-import { Card, Button } from 'react-bootstrap';
 
 function RecipeCard({
   image,
+  category,
   title,
-  time,
-  calories
+  description,
+  calories,
+  time
 }) {
   return (
-    <Card className="recipe-card">
+    <div className="recipe-card">
 
-      <Card.Img
-        variant="top"
-        src={image}
-      />
+      <img src={image} alt={title} />
 
-      <Card.Body>
+      <div className="recipe-content">
 
-        <Card.Title>
-          {title}
-        </Card.Title>
+        <span className="recipe-category">
+          {category}
+        </span>
 
-        <Card.Text>
-          ⏱️ {time}
-          <br />
-          🔥 {calories}
-        </Card.Text>
+        <h3>{title}</h3>
 
-        <Button
-          variant="success"
-        >
-          Ver Receita
-        </Button>
+        <p>{description}</p>
 
-      </Card.Body>
+        <div className="recipe-info">
+          <span>⏱ {time}</span>
+          <span>🔥 {calories}</span>
+        </div>
 
-    </Card>
+      </div>
+
+    </div>
   );
 }
 
