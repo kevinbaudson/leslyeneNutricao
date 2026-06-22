@@ -69,10 +69,10 @@ function Recipes() {
           </p>
 
            <PopupButton
-                url="https://calendly.com/kevinbaudson/30min"
+                url="https://calendly.com/leslyenebaudson/30min?lang=pt-BR"
                 rootElement={document.body}
                 text="Agendar Consulta"
-                className="btn btn-outline-success btn-lg"
+                className="btn-recipes-cta"
               />
         </div>
       </Container>

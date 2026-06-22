@@ -4,7 +4,7 @@ import { GiLeafSwirl } from "react-icons/gi";
 
 import "./Header.css";
 
-import Logo from "../../assets/images/mana.svg?react";
+import Logo from "../../assets/images/logo.png"
 
 function Header() {
   const [expanded, setExpanded] = useState(false);
@@ -21,8 +21,7 @@ function Header() {
       <Container>
         <Navbar.Brand href="/" onClick={closeMenu}>
           <div className="logo">
-            
-            <Logo className="logo-img" />
+            <img src={Logo} alt="Leslyene Nutricionista" className="logo-img" />
           </div>
         </Navbar.Brand>
 

@@ -43,7 +43,7 @@ export default function Plans() {
   return (
     <section
       ref={ref}
-      className={`plans ${visible ? "show" : ""}`}
+      className={`section plans ${visible ? "show" : ""}`}
       id="plans"
     >
       <div className="plans-container">

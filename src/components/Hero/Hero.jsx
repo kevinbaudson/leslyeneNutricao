@@ -5,54 +5,56 @@ import avatarNutri from "../../assets/images/avatar-nutri.png";
 
 function Hero() {
   return (
-    <section className="hero fade-up" id="inicio">
+    <section className="hero section fade-up" id="inicio">
       <Container>
         <Row className="align-items-center">
           <Col lg={6}>
-            <span className="hero-tag">Nutrição personalizada</span>
+            <span className="hero-tag">
+              Nutrição personalizada para sua rotina
+            </span>
 
             <h1 className="hero-title">
-              Transforme sua alimentação e conquiste mais saúde.
+              Construa hábitos saudáveis sem dietas restritivas.
             </h1>
 
             <p className="hero-description">
-              Atendimento nutricional focado em resultados reais, hábitos
-              sustentáveis e qualidade de vida.
+              Atendimento nutricional humanizado, focado em resultados reais,
+              emagrecimento sustentável e melhoria da sua relação com a comida.
             </p>
 
             <div className="hero-buttons">
               <Button
                 size="lg"
                 className="btn-whatsapp"
-                href="https://wa.me/+5531973108006"
+                href="https://wa.me/5531973108006"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Falar no WhatsApp
+                Quero começar agora
               </Button>
 
               <PopupButton
-                url="https://calendly.com/kevinbaudson/30min"
+                url="https://calendly.com/leslyenebaudson/30min?lang=pt-BR"
                 rootElement={document.body}
-                text="Agendar Consulta"
+                text="Agendar consulta"
                 className="btn btn-outline-success btn-lg"
               />
             </div>
 
             <div className="hero-numbers">
               <div>
-                <h3>+500</h3>
-                <span>Pacientes</span>
+                <h3>Atendimento individual</h3>
+                <span>Plano personalizado</span>
               </div>
 
               <div>
-                <h3>5★</h3>
-                <span>Avaliações</span>
+                <h3>Foco em resultado real</h3>
+                <span>Sem dietas extremas</span>
               </div>
 
               <div>
-                <h3>Escolha</h3>
-                <span>Online ou presencial</span>
+                <h3>Online e presencial</h3>
+                <span>Flexível para você</span>
               </div>
             </div>
           </Col>
@@ -62,7 +64,7 @@ function Hero() {
 
             <img
               src={avatarNutri}
-              alt="Nutricionista"
+              alt="Nutricionista Leslyene"
               className="hero-avatar"
             />
           </Col>
