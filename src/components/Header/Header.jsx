@@ -4,6 +4,8 @@ import { GiLeafSwirl } from "react-icons/gi";
 
 import "./Header.css";
 
+import Logo from "../../assets/images/mana.svg?react";
+
 function Header() {
   const [expanded, setExpanded] = useState(false);
 
@@ -11,30 +13,26 @@ function Header() {
 
   return (
     <Navbar
-      bg="light"
+      className="header"
       expand="lg"
       sticky="top"
       expanded={expanded}
     >
       <Container>
-
         <Navbar.Brand href="/" onClick={closeMenu}>
           <div className="logo">
-            <h1 className="logo-name">
-              <GiLeafSwirl className="leaf-icon" />
-              Leslyene
-            </h1>
-            <span className="logo-subtitle">NUTRICIONISTA</span>
+            
+            <Logo className="logo-img" />
           </div>
         </Navbar.Brand>
 
         <Navbar.Toggle
           onClick={() => setExpanded(!expanded)}
+          aria-controls="main-navbar"
         />
 
-        <Navbar.Collapse>
+        <Navbar.Collapse id="main-navbar">
           <Nav className="ms-auto">
-
             <Nav.Link href="#inicio" onClick={closeMenu}>
               Início
             </Nav.Link>
@@ -54,10 +52,8 @@ function Header() {
             <Nav.Link href="#testimonials" onClick={closeMenu}>
               Depoimentos
             </Nav.Link>
-
           </Nav>
         </Navbar.Collapse>
-
       </Container>
     </Navbar>
   );
