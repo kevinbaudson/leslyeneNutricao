@@ -1,5 +1,5 @@
 import "./WhatsAppButton.css";
-
+import { FaWhatsapp } from "react-icons/fa";
 export default function WhatsAppButton() {
   return (
     <a
@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      💬 Falar no WhatsApp
+      <FaWhatsapp />
     </a>
   );
 }
