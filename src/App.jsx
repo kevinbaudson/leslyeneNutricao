@@ -2,6 +2,7 @@ import './App.css';
 
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
+import HowItWorks from './components/HowItWorks/HowItWorks';
 import About from './components/About/About';
 import Plans from './components/Plans/Plans';
 import Recipes from './components/Recipes/Recipes';
@@ -17,10 +18,12 @@ function App() {
       <Hero />
 
       <About />
+      <HowItWorks />
+
+      <Plans />
 
       <Recipes />
 
-      <Plans />
 
       <Testimonials />
 

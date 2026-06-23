@@ -32,7 +32,7 @@ function Header() {
 
         <Navbar.Collapse id="main-navbar">
           <Nav className="ms-auto">
-            <Nav.Link href="#inicio" onClick={closeMenu}>
+            <Nav.Link  href="#inicio" onClick={closeMenu}>
               Início
             </Nav.Link>
 
