@@ -1,35 +1,27 @@
-import './RecipeCard.css';
+import "./RecipeCard.css";
 
 function RecipeCard({
   image,
-  category,
   title,
-  description,
   calories,
   time
 }) {
   return (
-    <div className="recipe-card">
+    <div className="recipe-item">
+      <img
+        src={image}
+        alt={title}
+        className="recipe-thumb"
+      />
 
-      <img src={image} alt={title} />
-
-      <div className="recipe-content">
-
-        <span className="recipe-category">
-          {category}
-        </span>
-
+      <div className="recipe-body">
         <h3>{title}</h3>
 
-        <p>{description}</p>
-
-        <div className="recipe-info">
+        <div className="recipe-meta">
           <span>⏱ {time}</span>
           <span>🔥 {calories}</span>
         </div>
-
       </div>
-
     </div>
   );
 }
