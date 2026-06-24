@@ -10,17 +10,16 @@ export function useSectionReveal() {
         if (entry.isIntersecting) {
           setVisible(true);
         } else {
-          setVisible(false); // 👈 ESSA LINHA É O SEGREDO
+          setVisible(false); // 👈 permite reanimar sempre
         }
       },
       {
         threshold: 0.2,
+        rootMargin: "0px 0px -10% 0px",
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
   }, []);
