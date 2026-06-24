@@ -1,6 +1,7 @@
 import "./About.css";
 
 import { useSectionReveal } from "../../hooks/useSectionReveal";
+import BookingButton from "../BookingButton/BookingButton";
 
 export default function About() {
   const [ref, visible] = useSectionReveal();
@@ -49,7 +50,7 @@ export default function About() {
         </div>
 
         <div className="about-cta">
-          <button>Agendar consulta</button>
+          <BookingButton />
         </div>
       </div>
     </section>

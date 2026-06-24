@@ -1,0 +1,39 @@
+.booking-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border-radius: 14px !important;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+
+  cursor: pointer;
+}
+
+/* PRIMARY (default) */
+.booking-button.primary {
+  background: var(--color-button-cta);
+  color: var(--white);
+}
+
+.booking-button.primary:hover {
+  background: var(--btn-cta-hover);
+  transform: scale(1.05);
+}
+
+
+/* SECONDARY (opcional) */
+.booking-button.secondary {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.booking-button.secondary:hover {
+  background: rgba(111, 143, 114, 0.08);
+  transform: translateY(-2px);
+}

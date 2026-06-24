@@ -3,41 +3,51 @@
   top: 16px;
   width: 100%;
   margin: 0;
+
   background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(16px);
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
   z-index: 1000;
-
-  transition: all 0.3s ease;
 }
 
+/* CONTAINER MAIS COMPACTO */
 .navbar > .container {
   max-width: 1200px;
   margin: 0 auto;
+
   padding: 0 20px;
-  min-height: 60px;
-  height: 60px;
+
+  /* 🔥 reduz altura real */
+  min-height: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center; /* garante alinhamento vertical */
 }
 
-
+/* LOGO MENOR PARA AJUDAR ALTURA */
 .logo-img {
-  width: 160px;
+  width: 135px;
   height: auto;
   object-fit: contain;
 }
 
+/* LINKS ALINHADOS NA MESMA LINHA DO CTA */
 .navbar-nav {
-  gap: 1.8rem;
+  gap: 1.4rem;
+  align-items: center; /* 🔥 chave do alinhamento */
 }
 
+/* LINKS */
 .nav-link {
   color: #e2e8f0 !important;
 
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 500;
 
+  padding: 6px 0; /* reduz altura visual */
   transition: 0.3s;
 }
 
@@ -45,25 +55,21 @@
   color: #8cb38f !important;
 }
 
-.navbar-toggler {
-  background: transparent !important;
-  border: none !important;
-}
-
-.navbar-toggler-icon {
-  filter: brightness(0) invert(1);
-  opacity: 1;
-  filter: brightness(0) invert(1) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
-}
-
+/* BOTÃO CTA ALINHADO COM LINKS */
 .btn-consulta {
   background: #8cb38f !important;
   border: none !important;
 
-  padding: 12px 24px !important;
+  padding: 8px 18px !important; /* 🔥 menor e mais alinhado */
   border-radius: 999px !important;
 
   font-weight: 600 !important;
+  font-size: 0.9rem;
+
+  display: flex;
+  align-items: center;
+
+  height: 34px; /* força alinhamento perfeito com links */
 
   transition: 0.3s ease;
 }
@@ -72,52 +78,55 @@
   transform: translateY(-2px);
 }
 
+/* TOGGLER */
 .navbar-toggler {
   border: none !important;
   box-shadow: none !important;
 }
 
-.navbar-toggler:focus {
-  box-shadow: none !important;
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1)
+    drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
 }
+
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 991px) {
   .navbar > .container {
-    min-height: 60px;
     height: auto;
-    padding: 10px 20px;
-  }
-
-  .navbar-nav {
-     
-    text-align: center;
-    gap: 0.5rem;
-  
+    min-height: 48px; /* 🔥 menor ainda no mobile */
+    padding: 8px 16px;
   }
 
   .logo-img {
-    width: 120px;
-  }
-    .navbar-collapse {
-    margin-top: 12px;
-    padding: 20px;
-
-
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 20px;
-
-    box-shadow: 0 20px 40px rgba(0,0,0,.25);
-  }
-    .navbar-nav .nav-link {
-    padding: 14px 16px !important;
-
-    border-radius: 12px;
-
-    transition: all .3s ease;
+    width: 110px;
   }
 
-  .navbar-nav .nav-link:hover {
-    background: rgba(140, 179, 143, 0.12);
-    color: #8cb38f !important;
-    transform: translateX(4px);
+  .navbar-collapse {
+    margin-top: 10px;
+    padding: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  .navbar-nav {
+    text-align: center;
+    gap: 0.4rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 12px !important;
+    border-radius: 10px;
+  }
+
+  .btn-consulta {
+    width: 100%;
+    justify-content: center;
+    margin-top: 6px;
   }
 }

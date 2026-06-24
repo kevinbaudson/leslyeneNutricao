@@ -1,6 +1,6 @@
 import "./Hero.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { PopupButton } from "react-calendly";
+
 import avatarNutri from "../../assets/images/nutri.png";
 
 function Hero() {
@@ -30,15 +30,9 @@ function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Quero começar agora
+                Fale diretamente comigo
               </Button>
 
-              <PopupButton
-                url="https://calendly.com/leslyenebaudson/30min?lang=pt-BR"
-                rootElement={document.body}
-                text="Agendar consulta"
-                className="btn btn-outline-success btn-lg"
-              />
             </div>
 
             <div className="hero-numbers">

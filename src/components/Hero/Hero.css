@@ -65,11 +65,11 @@
 }
 
 .btn-whatsapp {
-  background: linear-gradient(
-    135deg,
-    #6f8f72,
-    #8cb38f
-  ) !important;
+ background: linear-gradient(
+  135deg,
+  #27AE60 0%,
+  #1E9E52 100%
+);
 
   border: none !important;
 
@@ -91,27 +91,6 @@
   box-shadow: 0 20px 40px rgba(111, 143, 114, 0.35);
 }
 
-.btn-secondary-hero {
-  background: white !important;
-
-  border: 1px solid #e5e7eb !important;
-
-  color: var(--dark) !important;
-
-  padding: 16px 30px !important;
-
-  border-radius: 14px !important;
-
-  font-weight: 600 !important;
-
-  transition: all 0.3s ease;
-}
-
-.btn-secondary-hero:hover {
-  transform: translateY(-3px);
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
 
 .hero-image-wrapper {
   position: relative;
