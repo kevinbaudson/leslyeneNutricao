@@ -3,8 +3,7 @@
   top: 16px;
   width: 100%;
   margin: 0;
-
-  background: rgba(15, 23, 42, 0.75);
+  background: radial-gradient(circle at bottom right, #111c33, #0f172a 60%);
   backdrop-filter: blur(16px);
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -85,8 +84,7 @@
 }
 
 .navbar-toggler-icon {
-  filter: brightness(0) invert(1)
-    drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+  filter: brightness(0) invert(1) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
 }
 
 /* =========================
