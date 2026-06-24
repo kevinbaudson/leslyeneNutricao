@@ -1,19 +1,75 @@
 .whatsapp-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
+  bottom: 22px;
+  right: 22px;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #25d366 0%, #1ebe5d 100%);
   color: white;
-  padding: 14px 18px;
-  border-radius: 50px;
-  font-weight: 600;
+
+  border-radius: 50%;
+
+  font-size: 1.4rem;
+
   text-decoration: none;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  z-index: 999;
-  transition: 0.3s;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+
+  z-index: 99999; /* <- evita qualquer conflito */
+
+  transition: all 0.25s ease;
+
+  /* garante que não herda overflow estranho */
+  pointer-events: auto;
 }
 
+/* hover suave */
 .whatsapp-button:hover {
-  transform: scale(1.05);
-  background: #1ebe5d;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* efeito pulse sutil (UX melhor) */
+.whatsapp-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  background: rgba(37, 211, 102, 0.4);
+
+  animation: pulse 2.2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* mobile ajustado */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    width: 52px;
+    height: 52px;
+    bottom: 16px;
+    right: 16px;
+    font-size: 1.2rem;
+  }
 }
