@@ -4,7 +4,7 @@
   align-items: center;
 
   background: var(--secondary);
-  padding: 110px 0 80px;
+  /* padding: 110px 0 80px; */
 }
 
 /* LAYOUT */
@@ -120,6 +120,8 @@
 @media (max-width: 992px) {
   .hero {
     text-align: center;
+    padding-top: calc(60px + 20px);
+    min-height: auto;
   }
 
   .hero-description {

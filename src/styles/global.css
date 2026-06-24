@@ -12,6 +12,8 @@ html {
 body {
   font-family: "Montserrat", sans-serif !important;
   overflow-x: hidden;
+   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .whatsapp-button {
   z-index: 999999 !important;
@@ -19,15 +21,24 @@ body {
 .section {
   width: 100%;
   padding: 80px 20px;
+
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-  will-change: opacity, transform;
+  transform: translateY(18px);
+
+  filter: blur(4px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s ease;
+
+    will-change: opacity, transform, filter;
 }
 
 .section.show {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0);
 }
 
 .container {
