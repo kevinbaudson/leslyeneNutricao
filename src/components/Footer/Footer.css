@@ -1,11 +1,7 @@
 .footer {
   width: 100%;
   margin: 0;
-  background: radial-gradient(
-    circle at bottom right,
-    #111c33,
-    #0f172a 60%
-  );
+  background: var(--background-sections);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: #e2e8f0;
 

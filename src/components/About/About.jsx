@@ -12,13 +12,13 @@ export default function About() {
         <div className="about-header">
           <span className="about-badge">Nutricionista Clínica</span>
 
-          <h2>
+          <h2 className={`fade-up ${visible ? "show" : ""}`}>
             Nutrição baseada em ciência,
             <br />
             focada em resultados reais
           </h2>
 
-          <p>
+          <p className={`fade-up ${visible ? "show" : ""}`} style={{ transitionDelay: "0.15s" }}>
             Atendimento personalizado para emagrecimento, saúde metabólica e performance.
           </p>
         </div>

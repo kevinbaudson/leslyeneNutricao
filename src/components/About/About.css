@@ -1,10 +1,6 @@
 .about {
   padding: 100px 20px;
-  background: radial-gradient(
-    circle at top left,
-    #111c33,
-    #0f172a 80%
-  );
+  background: var(--background-sections);
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -20,11 +16,7 @@
   left: -200px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(
-    circle,
-    rgba(46,204,113,0.18),
-    transparent 65%
-  );
+  
   filter: blur(80px);
 }
 
