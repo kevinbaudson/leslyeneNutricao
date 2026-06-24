@@ -1,66 +1,51 @@
 import "./Hero.css";
-import { Container, Row, Col, Button } from "react-bootstrap";
-
+import { Container, Row, Col } from "react-bootstrap";
 import avatarNutri from "../../assets/images/nutri.png";
+import BookingButton from "../BookingButton/BookingButton";
 
 function Hero() {
   return (
-    <section className="hero section fade-up" id="inicio">
+    <section className="hero" id="inicio">
       <Container>
-        <Row className="align-items-center">
-          <Col lg={6}>
-            <span className="hero-tag">
+        <Row className="align-items-center hero-row">
+          {/* TEXT */}
+          <Col lg={6} className="hero-content">
+            <span className="hero-badge">
               Nutrição personalizada para sua rotina
             </span>
 
             <h1 className="hero-title">
-              Construa hábitos saudáveis sem dietas restritivas.
+              Transforme sua relação com a comida sem dietas restritivas.
             </h1>
 
             <p className="hero-description">
-              Atendimento nutricional humanizado, focado em resultados reais,
-              emagrecimento sustentável e melhoria da sua relação com a comida.
+              Atendimento nutricional humanizado, com foco em resultados reais,
+              emagrecimento sustentável e autonomia alimentar.
             </p>
 
-            <div className="hero-buttons">
-              <Button
-                size="lg"
-                className="btn-whatsapp"
+            <div className="hero-actions">
+              <BookingButton />
+
+              <a
                 href="https://wa.me/5531973108006"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hero-whatsapp"
               >
-                Fale diretamente comigo
-              </Button>
-
-            </div>
-
-            <div className="hero-numbers">
-              <div>
-                <h3>Atendimento individual</h3>
-                <span>Plano personalizado</span>
-              </div>
-
-              <div>
-                <h3>Foco em resultado real</h3>
-                <span>Sem dietas extremas</span>
-              </div>
-
-              <div>
-                <h3>Online e presencial</h3>
-                <span>Flexível para você</span>
-              </div>
+                Falar no WhatsApp
+              </a>
             </div>
           </Col>
 
-          <Col lg={6} className="text-center hero-image-wrapper">
-            <div className="hero-blob"></div>
-
-            <img
-              src={avatarNutri}
-              alt="Nutricionista Leslyene"
-              className="hero-avatar"
-            />
+          {/* IMAGE */}
+          <Col lg={6} className="hero-image">
+            <div className="hero-image-mask">
+              <img
+                src={avatarNutri}
+                alt="Nutricionista Leslyene"
+                className="hero-avatar"
+              />
+            </div>
           </Col>
         </Row>
       </Container>
