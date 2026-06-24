@@ -9,12 +9,12 @@ export function useSectionReveal() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.unobserve(entry.target); // importante
+        } else {
+          setVisible(false); // 👈 ESSA LINHA É O SEGREDO
         }
       },
       {
-        threshold: 0.15,
-        rootMargin: "0px 0px -20% 0px",
+        threshold: 0.2,
       }
     );
 
