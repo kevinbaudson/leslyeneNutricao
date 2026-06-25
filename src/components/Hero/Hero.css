@@ -1,3 +1,4 @@
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -6,7 +7,6 @@
   background: linear-gradient(180deg, #ffffff 0%, #f8faf7 50%, #e8f1e7 100%);
   clip-path: ellipse(110% 98% at 50% 0%);
 }
-
 
 .hero .container {
   position: relative;
@@ -65,7 +65,7 @@
   flex-wrap: wrap;
 }
 
-/* BUTTON PRIMARY (CTA) */
+/* BUTTON PRIMARY */
 .hero-actions button,
 .hero-actions .btn {
   border-radius: 999px !important;
@@ -103,8 +103,10 @@
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  margin-bottom: -1px;
+  margin-bottom: 0;
+  height: 100%;
 }
+
 .hero-image::before {
   content: "";
 
@@ -127,12 +129,14 @@
   animation: pulseGlow 8s ease-in-out infinite;
 }
 
+/* AVATAR */
 .hero-avatar {
   position: relative;
   max-width: 420px;
   width: 100%;
   margin-bottom: 0;
-  display: block:
+  display: block;
+
   z-index: 2;
   filter: drop-shadow(0 30px 50px rgba(0, 0, 0, 0.12));
 
@@ -159,8 +163,6 @@
     padding-top: calc(60px + 20px);
     min-height: auto;
     clip-path: ellipse(120% 96% at 50% 0%);
-  
-}
   }
 
   .hero-description {
