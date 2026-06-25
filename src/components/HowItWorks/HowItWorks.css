@@ -144,13 +144,13 @@
 
 /* ANIMATION */
 .fade {
-  animation: fadeIn 8s ease;
+  animation: fadeIn 7s ease;
   will-change: opacity, transform;
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0.2;
+    opacity: 0.6;
     transform: translateY(8px);
   }
   to {
