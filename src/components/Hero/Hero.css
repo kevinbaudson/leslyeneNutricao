@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 0;
   background: linear-gradient(180deg, #ffffff 0%, #f8faf7 50%, #e8f1e7 100%);
   clip-path: ellipse(110% 98% at 50% 0%);
 }
@@ -16,7 +16,7 @@
 /* LAYOUT */
 .hero-row {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 /* BADGE */
@@ -101,7 +101,9 @@
 .hero-image {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   position: relative;
+  margin-bottom: -1px;
 }
 .hero-image::before {
   content: "";
@@ -129,6 +131,8 @@
   position: relative;
   max-width: 420px;
   width: 100%;
+  margin-bottom: 0;
+  display: block:
   z-index: 2;
   filter: drop-shadow(0 30px 50px rgba(0, 0, 0, 0.12));
 
