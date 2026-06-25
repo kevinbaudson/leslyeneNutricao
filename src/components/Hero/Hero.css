@@ -154,6 +154,9 @@
     text-align: center;
     padding-top: calc(60px + 20px);
     min-height: auto;
+    clip-path: ellipse(120% 96% at 50% 0%);
+  
+}
   }
 
   .hero-description {
